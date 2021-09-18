@@ -1,0 +1,119 @@
+.input-text {
+    position: relative;
+    margin-top: 4px;
+    padding: 4px 10px;
+    width: 100%;
+    min-height: 32px;
+    font-size: 13px;
+    color: #333;
+    border-radius: 2px;
+    border: 1px solid #e0e1e2;
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    &>.main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &>.current-search-select-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 2px 4px;
+            background: #f2f2f2;
+            color: #666;
+            margin-bottom: 2px;
+            margin-right: 8px;
+            border-radius: 2px;
+            cursor: default;
+
+            &>.el-icon-close {
+                margin-left: 2px;
+                cursor: pointer;
+                padding: 2px;
+            }
+        }
+    }
+
+    &.placeholder {
+        color: #6062667a;
+    }
+
+    &>.el-icon {
+        position: absolute;
+        right: 10px;
+        color: #e0e1e2;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.search-select-list-wrap {
+    position: relative;
+    min-width: 220px;
+    background: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .search-input {
+        position: absolute;
+        width: calc(100% - 12px);
+        box-sizing: border-box;
+    }
+
+    .main-wrapper {
+        max-height: 350px;
+        overflow-y: auto;
+
+        .search-select-list-wrap {
+            margin: 8px 0;
+        }
+    }
+}
+
+.popper-wrapper {
+    & /deep/ .popper__arrow {
+        // left:20px;
+    }
+}
+
+ul {
+    margin: 0;
+}
+
+ul>.loadMore {
+    margin-top: 12px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+ul>.loadMore.no {
+    cursor: default;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+        background: #f2f2f2;
+    }
+
+    &.is-select {
+        background: #40a0ff88;
+        color: #fff;
+    }
+}
+
+.popper-wrapper {
+    padding-bottom: 0 !important;
+}
