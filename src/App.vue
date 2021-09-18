@@ -3,9 +3,9 @@
     <div class="left-bar">
       <router-link to="/search-tree">Search Tree</router-link>
       <router-link to="/search-tree-v2">SearchTree Popper</router-link>
-      <router-link to="/select-test">Select Test</router-link>
       <router-link to="/calendar-test">Calendar Test</router-link>
       <router-link to="/search-select-list">SearchSelectList</router-link>
+      <router-link to="/select-test">element下拉测试</router-link>
 
       <!-- SearchSelectList -->
     </div>
