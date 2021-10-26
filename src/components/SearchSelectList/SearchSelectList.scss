@@ -70,8 +70,13 @@
         max-height: 350px;
         overflow-y: auto;
 
-        .search-select-list-wrap {
-            margin: 8px 0;
+        .search-select-list-wrapper {
+            display: block;
+            margin: 8px 0 0;
+
+            .li-item{
+                display: block;
+            }
         }
     }
 }
@@ -86,14 +91,14 @@ ul {
     margin: 0;
 }
 
-ul>.loadMore {
+.main-wrapper>.loadMore {
     margin-top: 12px;
     text-align: center;
     cursor: pointer;
-    text-decoration: underline;
+    // text-decoration: underline;
 }
 
-ul>.loadMore.no {
+.main-wrapper>.loadMore.no {
     cursor: default;
     text-decoration: none;
 }

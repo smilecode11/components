@@ -12,6 +12,12 @@
         :isMulti="false"
         clearable
       >
+        <template v-slot:selectItem="item">
+          <div class="item-wrap">
+            <div>name: {{item.name}}</div>
+            <div>description: {{item.description}}</div>
+          </div>
+        </template>
       </search-select-list>
       <h4 style="margin-top: 20px; min-height:220px">
         当前值： {{ currentSearchSelectData }}
@@ -26,7 +32,7 @@ import SearchSelectList from "../../components/SearchSelectList/SearchSelectList
 export default {
   data() {
     return {
-      params: { pageSize: 10, currentPage: 1, keyword: "" },
+      params: { pageSize: 15, currentPage: 1, keyword: "" },
 
       selectlistDefaultProps: { value: "id", label: "name", key: "id" },
       selectlistData: {},
@@ -92,7 +98,7 @@ export default {
 
 <style>
 .template-search-tree {
-  width: 100%;
-  height: 100%;
+  /* width: 200%; */
+  /* height: 200%; */
 }
 </style>

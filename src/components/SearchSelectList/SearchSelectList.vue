@@ -19,19 +19,26 @@
         clearable
       ></el-input>
       <div class="main-wrapper">
-        <ul class="search-select-list-wrap">
-          <template v-if="selectlistData.total > 0">
+        <template v-if="selectlistData.total > 0">
+          <ul
+            class="search-select-list-wrapper"
+            v-infinite-scroll="loadMore"
+            :infinite-scroll-immediate="false"
+            style="overflow:visible"
+          >
             <li
               @click="handleChangeSelectWithItem(item)"
               v-for="(item, index) in selectlistData.list"
               :key="index"
+              class="li-item"
               :class="{ 'is-select': isSelected(item[defaultProps['value']]) }"
             >
-              <slot name="selectItem">
+              <slot name="selectItem" v-bind="item">
                 <div>{{ item[defaultProps["label"]] }}</div>
               </slot>
             </li>
-            <div
+          </ul>
+          <div
               v-if="
                 selectlistData.list &&
                 selectlistData.list.length < selectlistData.total
@@ -39,14 +46,13 @@
               @click="loadMore"
               class="loadMore"
             >
-              检索更多
+              加载中...
             </div>
             <div class="loadMore no" v-else>没有更多了</div>
-          </template>
-          <template v-else>
-            <div class="loadMore no">未检索到任何数据</div>
-          </template>
-        </ul>
+        </template>
+        <template v-else>
+          <div class="loadMore no">未检索到任何数据</div>
+        </template>
       </div>
     </div>
 
@@ -163,7 +169,7 @@ export default {
   },
   data() {
     return {
-      searchSelectListShow: false,
+      searchSelectListShow: true,
       searchSelectInputValue: "",
       popperOptions: {
         boundariesElement: "viewport",

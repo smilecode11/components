@@ -7,7 +7,8 @@ import {
     Option,
     Popover,
     Table,
-    TableColumn
+    TableColumn,
+    InfiniteScroll
 } from "element-ui"
 
 Vue
@@ -19,3 +20,4 @@ Vue
     .use(Popover)
     .use(Table)
     .use(TableColumn)
+    .use(InfiniteScroll)
