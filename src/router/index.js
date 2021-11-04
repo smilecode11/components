@@ -21,6 +21,9 @@ const routes = [{
     }, {
     path: '/search-select-list',
         component:()=>import("../view/search-select-list/index")
+    }, {
+    path: '/editor',
+        component:()=>import("../view/editor/index.vue")
     },{
     path: '*',
     component: NotFoundPage

@@ -6,6 +6,7 @@
       <router-link to="/calendar-test">Calendar Test</router-link>
       <router-link to="/search-select-list">SearchSelectList</router-link>
       <router-link to="/select-test">element下拉测试</router-link>
+      <router-link to="/editor">富文本编辑器</router-link>
 
       <!-- SearchSelectList -->
     </div>
