@@ -7,8 +7,9 @@
       <router-link to="/search-select-list">SearchSelectList</router-link>
       <router-link to="/select-test">element下拉测试</router-link>
       <router-link to="/editor">富文本编辑器</router-link>
-
-      <!-- SearchSelectList -->
+      <router-link to="/css-tools">css tools</router-link>
+      <router-link to="/image-editor">image-editor</router-link>
+      <router-link to="/vue-cropper">vue-cropper</router-link>
     </div>
     <div class="right-main">
       <router-view></router-view>

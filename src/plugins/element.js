@@ -8,7 +8,9 @@ import {
     Popover,
     Table,
     TableColumn,
-    InfiniteScroll
+    InfiniteScroll,
+    Dialog,
+    Upload
 } from "element-ui"
 
 Vue
@@ -21,3 +23,5 @@ Vue
     .use(Table)
     .use(TableColumn)
     .use(InfiniteScroll)
+    .use(Dialog)
+    .use(Upload)
