@@ -82,7 +82,7 @@
 }
 
 .popper-wrapper {
-    & /deep/ .popper__arrow {
+    &::v-deep .popper__arrow {
         // left:20px;
     }
 }

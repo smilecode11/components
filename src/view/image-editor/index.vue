@@ -1,5 +1,5 @@
 <template>
-  <dev>
+  <div>
     <h1>图片处理</h1>
     <div class="drawing-container">
       <div id="tui-image-editor"></div>
@@ -7,7 +7,7 @@
         >保存</el-button
       >
     </div>
-  </dev>
+  </div>
 </template>
 <script>
 import "tui-image-editor/dist/tui-image-editor.css";
